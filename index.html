@@ -1,254 +1,219 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
 
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Article Detail - NewsPortal</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap"
-        rel="stylesheet" />
-    <script id="tailwind-config">
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Foodie - Minimalist Dining</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#137fec",
-                        "background-light": "#f6f7f8",
-                        "background-dark": "#101922",
+                        "primary": "#f48c25",
+                        "background-light": "#ffffff",
+                        "background-dark": "#221910",
                     },
                     fontFamily: {
-                        "display": ["Newsreader", "serif"]
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
                     },
-                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
                 },
             },
         }
     </script>
-    <style>
+<style>
         body {
-            font-family: 'Newsreader', serif;
-        }
-
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
     </style>
 </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-100 dark:border-slate-800">
+<div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">restaurant</span>
+<span class="text-xl font-bold tracking-tight">Foodie</span>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Menu</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-primary text-white px-6 py-2.5 rounded-full font-bold text-sm hover:opacity-90 transition-opacity">
+                Order Now
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden">
+<div class="max-w-6xl mx-auto px-6">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="space-y-8 max-w-xl">
+<h1 class="text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tight text-slate-900 dark:text-white">
+                        Deliciousness <br/>
+<span class="text-primary">Delivered</span> To Your Door
+                    </h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Experience the taste of fresh, locally-sourced ingredients prepared by world-class chefs. Simple, healthy, and delivered fast.
+                    </p>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-lg hover:shadow-primary/20 transition-all">
+                            Explore Menu
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square w-full rounded-3xl overflow-hidden shadow-2xl">
+<img alt="Gourmet plated dish" class="w-full h-full object-cover" data-alt="A beautifully plated high-end gourmet dish with vibrant colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7Kg0W5butqdnncXykZr3YJ278YIDCXfltkbKgBTZ1ZMJomOezGX1IR38dPVPBTs9m8e3MMkoY3PKZMeD02xjl0l9c4qgFJ3R5kiqziJwUOGqByfuLWGXK5EZ34Cud7Y3ptBSvWERJVD3MIPJvyH0F394rN9PjzNYsrIVzoyLIEmUHcQ2PNx7FJY4or2LVdefkyzJ_R4u_aphJBDq9qYZSTa5hxrlXFwKscmLC843Ctei_rlqjHP2vQsXCtdqrEBFkfzW0azyhO6lq"/>
+</div>
+<!-- Decorative Element -->
 
-<body
-    class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-gray-100 transition-colors duration-200">
-    <div class="fixed top-0 left-0 w-full h-1 z-50 bg-gray-200 dark:bg-gray-800">
-        <div class="h-full bg-primary" style="width: 45%;"></div>
-    </div>
-    <header
-        class="sticky top-0 z-40 w-full bg-white/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-[#f0f2f4] dark:border-gray-800 px-4 md:px-10 py-4">
-        <div class="max-w-[1200px] mx-auto flex items-center justify-between">
-            <div class="flex items-center gap-2 text-[#111418] dark:text-white">
-                <span class="material-symbols-outlined text-3xl text-primary">newspaper</span>
-                <h2 class="text-[#111418] dark:text-white text-xl font-bold leading-tight tracking-tight font-display">
-                    NewsPortal</h2>
-            </div>
-            <nav class="hidden md:flex items-center gap-8">
-                <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-                    href="#">Politics</a>
-                <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-                    href="#">Business</a>
-                <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-                    href="#">Tech</a>
-                <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-                    href="#">Culture</a>
-            </nav>
-        </div>
-    </header>
-    <main class="relative">
-        <article class="max-w-[960px] mx-auto px-4 py-12">
-            <div class="mb-4">
-                <span class="text-primary text-xs font-bold tracking-widest uppercase">Sustainable Development</span>
-            </div>
-            <h1 class="text-[#111418] dark:text-white text-4xl md:text-5xl font-bold leading-tight font-display mb-8">
-                The Future of Sustainable Urban Development in Modern Cities
-            </h1>
-            <div class="flex items-center gap-4 mb-10 border-y border-gray-100 dark:border-gray-800 py-6">
-                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAUqH9FugrEg-JpIK8H3Y8tGaq5piOKhMEF8aoj4HYTFIy25Vr4WOrIfhgPJ-sAZNJseG91StM8yUb7DytMcuZtiDgckSqbbPYm7UZ6V2BFJ5pFqubL7ZYrxHlSdK-sQ23Vo-zDfWi-KVh94knmmSPmq0pCM3xXwGQN8G-7Fzp3VU9KHBhWEct3mxvNlpO2iWk32qPzk_Dw2gWQK732gWArTN2Y65ixFbxsisuw6pqIGQF6fWMzKC0-JG22T426o5svx_yrW1g1Sk1D");'>
-                </div>
-                <div class="flex flex-col">
-                    <p class="text-[#111418] dark:text-white text-base font-semibold font-display">By Alexandra Reed</p>
-                    <p class="text-[#617589] text-sm">Published Oct 24, 2023 • 8 min read</p>
-                </div>
-                <div class="ml-auto">
-                    <button
-                        class="px-4 py-1.5 rounded-full border border-gray-200 dark:border-gray-700 text-sm font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Follow</button>
-                </div>
-            </div>
-            <div class="mb-12">
-                <div class="rounded-2xl overflow-hidden aspect-video relative">
-                    <div class="absolute inset-0 bg-cover bg-center"
-                        style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 40%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8ndpuMtJ8tLIMPtd_pLENA0rSGBtk_MXjR1IdPmYphPXpswNh-arHI74RmoXczpWTFHe2FoHPr-waEmN8UyC2bGmzMKlbW6X6Ksi01imQ2Nlym_EDpuXDBB7Od2iB8ndP69ujPb3iTCoVH1WPqHj4MkZc7TiCBfkbtEsB05N1qTn5dgPPiZsvEQ24pjzqA9OBoseHkVchhY4tnCdrNX4vcrnPE-Q6KzpQHg9fvG4DXfoIYdMh3wA1MTvt_VYfBgLbsx3sxKOUeL5k");'>
-                    </div>
-                    <div class="absolute bottom-4 left-6 text-white text-sm italic opacity-90">
-                        An artist's rendition of a vertical forest skyscraper in a dense urban environment.
-                    </div>
-                </div>
-            </div>
-            <div class="max-w-[720px] mx-auto text-lg leading-relaxed text-gray-800 dark:text-gray-300 font-display">
-                <p
-                    class="mb-8 first-letter:text-6xl first-letter:font-bold first-letter:mr-3 first-letter:float-left first-letter:text-primary">
-                    As the global population continues to shift towards urban centers, the demand for resilient and
-                    sustainable infrastructure has never been more critical. The traditional model of sprawling concrete
-                    jungles is being replaced by integrated ecosystems that prioritize human well-being and
-                    environmental health.
+</div>
+</div>
+</div>
+</header><!-- About Us Section -->
+<section class="py-24 bg-white dark:bg-background-dark" id="about">
+<div class="max-w-6xl mx-auto px-6">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1">
+<div class="aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+<img alt="Chef preparing food" class="w-full h-full object-cover" data-alt="A professional chef carefully plating a fresh salad with local ingredients" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRBlyFm4f8t8_kS0ZfVvUvUvUvUvUvUvUvUvUvUvUvUvUvUvUvUvUvUvUvUvUvU"/>
+</div>
+</div>
+<div class="space-y-6 order-1 md:order-2">
+<h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white">Our Passion for Quality</h2>
+<div class="h-1 w-20 bg-primary rounded-full"></div>
+<p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                    At Foodie, we believe that great meals start with the finest ingredients. Our journey began with a simple mission: to bring restaurant-quality dining to your doorstep using only locally-sourced, seasonal produce.
                 </p>
-                <h2 class="text-3xl font-bold text-[#111418] dark:text-white mt-12 mb-6">The Rise of Biophilic
-                    Architecture</h2>
-                <p class="mb-8">
-                    Biophilic design is not just about adding plants to a room; it’s about a fundamental shift in how we
-                    conceive of built environments. Architects are now looking at ways to mimic natural processes, using
-                    materials like cross-laminated timber and incorporating natural ventilation systems that reduce
-                    energy consumption by up to 40%.
+<p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Every dish is a labor of love, prepared by chefs who share a deep respect for culinary traditions and modern nutrition.
                 </p>
-                <blockquote
-                    class="my-12 border-l-4 border-primary pl-8 py-2 italic text-2xl text-[#111418] dark:text-gray-200">
-                    "The city of the future is not a place where we fight against nature, but a place where we live
-                    within it as part of a larger, breathing organism."
-                </blockquote>
-                <p class="mb-8">
-                    Recent developments in Singapore and Copenhagen showcase how "living walls" and urban wetlands can
-                    manage stormwater while providing natural cooling for the city's inhabitants. These interventions
-                    are proving that sustainability is not just a moral imperative, but an economic one.
+<div class="pt-4">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white font-bold">
+<span class="material-symbols-outlined text-primary">verified</span>
+                        100% Organic Ingredients
+                    </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Menu -->
+<section class="py-24 bg-slate-50 dark:bg-background-dark/50">
+<div class="max-w-6xl mx-auto px-6">
+<div class="flex flex-col items-center text-center mb-16 space-y-4">
+<h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white">Featured Menu</h2>
+<div class="h-1 w-20 bg-primary rounded-full"></div>
+<p class="text-slate-600 dark:text-slate-400 max-w-md mx-auto">Hand-picked favorites from our seasonal kitchen, prepared daily with love.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-10">
+<!-- Item 1 -->
+<div class="bg-white dark:bg-slate-800 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow group">
+<div class="aspect-square rounded-xl overflow-hidden mb-6">
+<img alt="Signature Burger" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Gourmet signature burger with melting cheese and fresh vegetables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEYvpRmrADYyUdRCHngeB7fAhE2BbSvejafXyP4fOKGxQLWKOqkxe81cOs5ElQacGHvqDFJUgKb05HT-VjPUCNwBSR-xOIC_HdneEegUTI7DpwDTjvekLIchwuzOrZCep-W6EOaXC62jAG8-EPRfe5wdoNKVEph5IqMLmLvR5nPZqmWOi57_UqCDIBCavj8pYjYV0Z2wvENQZ0HWCQsZT0fMkegNWCW34PEzitdSEwcVYhZ2c6z7NhcovN_dE0CAxa0bmrWAZNt2nI"/>
+</div>
+<div class="px-2 pb-2">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Signature Burger</h3>
+<span class="text-primary font-bold">$18</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Juicy wagyu beef with truffle mayo and caramelized onions.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-white dark:bg-slate-800 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow group">
+<div class="aspect-square rounded-xl overflow-hidden mb-6">
+<img alt="Green Goddess Salad" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Fresh green salad with organic kale and vibrant vegetables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGhNigePFKhr6Uvd7tyz2WcpmopYtDMTK81pP7OB7vK2pgss2KnX43wCapIKQq-Xrjk9yByE6pN1oyiSoL_sBIxGOEHSqqNg4S18F3iInJ5tt5Vpki_4PjRRtVJirlC7kc2SiZoL4U6VfjIebF9WITlk0ZhXOnH416dPBiAZ1UwRcsEqtqTceLjLiXphsXEAYQAAJryNLPvWXqXxNS3rOaiQnvqsCkaXbsnajoLumBtFKiJej3oxdqvrmaehUqmxvsVVbKOIaSCI1K"/>
+</div>
+<div class="px-2 pb-2">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Green Goddess</h3>
+<span class="text-primary font-bold">$14</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Organic kale with lemon vinaigrette and toasted pumpkin seeds.</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-white dark:bg-slate-800 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow group">
+<div class="aspect-square rounded-xl overflow-hidden mb-6">
+<img alt="Spicy Ramen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Authentic spicy ramen in a steaming ceramic bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlW7nF4aSkVFuLIQpSeniRqI8rHCjytpvMsqkom5EglNOemn_9TiaWXib9fgU4QOWmUA-G2Rul0UqaKkmh3uWt1PWvfxx1v7GKLOqoZSIrllr4dar59kr-F8-fjQvrLed7lwuv98Slffm5-wvTaNqkCk98fjl7sXheZYNi1jz9IK09__V7UMpNbenwmVv1snkd6HxOfqjjcGy_REgmN3mOn-tr_AVWu_jcqz1ns5c0GORCw1nvYeVzL90R79EoIZCH_Jrev44IGSuN"/>
+</div>
+<div class="px-2 pb-2">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Spicy Ramen</h3>
+<span class="text-primary font-bold">$16</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Authentic tonkotsu broth with tender pork belly and spice.</p>
+</div>
+</div>
+</div>
+<div class="mt-16 text-center">
+<button class="inline-flex items-center gap-2 text-primary font-bold hover:underline">
+                    View Full Menu
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Simple Footer -->
+<!-- Special Offers & Newsletter -->
+<section class="py-24 bg-primary/5 dark:bg-primary/10">
+<div class="max-w-6xl mx-auto px-6">
+<div class="bg-white dark:bg-slate-800 rounded-3xl p-8 md:p-16 shadow-xl border border-primary/10">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-6">
+<div class="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-bold">
+                        Limited Time Offer
+                    </div>
+<h2 class="text-3xl md:text-4xl font-extrabold">Get 20% Off Your First Order</h2>
+<p class="text-slate-600 dark:text-slate-400">
+                        Join our community of food lovers and stay updated with our seasonal menu launches and exclusive member-only promotions.
+                    </p>
+</div>
+<div>
+<form class="flex flex-col sm:flex-row gap-3">
+<input class="flex-1 px-6 py-4 rounded-xl border-slate-200 dark:border-slate-700 dark:bg-slate-900 focus:ring-primary focus:border-primary" placeholder="Enter your email" type="email"/>
+<button class="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:shadow-lg hover:shadow-primary/20 transition-all whitespace-nowrap" type="submit">
+                            Subscribe Now
+                        </button>
+</form>
+<p class="mt-4 text-xs text-slate-400 text-center sm:text-left">
+                        By subscribing, you agree to our Terms of Service and Privacy Policy.
+                    </p>
+</div>
+</div>
+</div>
+</div>
+</section><footer class="py-16 border-t border-slate-100 dark:border-slate-800">
+<div class="max-w-6xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl">restaurant</span>
+<span class="text-lg font-bold tracking-tight">Foodie</span>
+</div>
+<div class="flex items-center gap-8 text-slate-500 dark:text-slate-400 text-sm">
+<a class="hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms</a>
+<a class="hover:text-primary transition-colors" href="#">Careers</a>
+<a class="hover:text-primary transition-colors" href="#">Instagram</a>
+</div>
+<p class="text-slate-400 text-xs">
+                    © 2024 Foodie. Made with love for food.
                 </p>
-                <div class="my-12 p-1 bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden">
-                    <div
-                        class="w-full h-64 bg-gray-200 dark:bg-gray-900 flex flex-col items-center justify-center text-[#617589] gap-3">
-                        <span class="material-symbols-outlined text-5xl">play_circle</span>
-                        <p class="text-sm font-medium font-sans uppercase tracking-widest">The Green Corridor Project
-                        </p>
-                    </div>
-                </div>
-                <h2 class="text-3xl font-bold text-[#111418] dark:text-white mt-12 mb-6">Smart Grids and Renewables</h2>
-                <p class="mb-8">
-                    Technology plays a pivotal role. The integration of AI-driven smart grids allows cities to
-                    distribute energy more efficiently, tapping into localized solar arrays and wind turbines during
-                    peak hours. This decentralized approach ensures energy security and significantly lowers the carbon
-                    footprint of high-density districts.
-                </p>
-                <p class="mb-12">
-                    In conclusion, the path to sustainable urban development requires a multidisciplinary approach. It
-                    blends the artistry of architecture with the precision of data science and the empathy of urban
-                    planning. As we look toward 2050, these cities will be the blue-prints for human survival in an era
-                    of climate uncertainty.
-                </p>
-            </div>
-            <div
-                class="max-w-[720px] mx-auto mt-16 flex flex-col items-center border-t border-gray-100 dark:border-gray-800 pt-12">
-                <button class="group flex flex-col items-center gap-4 focus:outline-none">
-                    <div
-                        class="size-16 rounded-full bg-white dark:bg-gray-800 shadow-xl border border-gray-100 dark:border-gray-700 flex items-center justify-center text-primary group-hover:scale-110 group-active:scale-95 transition-all">
-                        <span
-                            class="material-symbols-outlined text-3xl font-variation-settings-['FILL'_1]">thumb_up</span>
-                    </div>
-                    <div class="flex flex-col items-center gap-1">
-                        <span class="text-2xl font-bold font-sans">1.2k</span>
-                        <span class="text-xs text-gray-400 font-bold uppercase tracking-widest">Likes</span>
-                    </div>
-                </button>
-            </div>
-        </article>
-        <section class="bg-white dark:bg-background-dark/50 border-t border-gray-100 dark:border-gray-800 py-20">
-            <div class="max-w-[960px] mx-auto px-4">
-                <h2 class="text-2xl font-bold mb-10 font-display">More for You</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                    <div class="group cursor-pointer">
-                        <div class="aspect-video rounded-xl overflow-hidden mb-4 shadow-sm">
-                            <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
-                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCR_FT9lYrq7rmlHPDnoXU-SciAl21mRm4JChTzDLKOcwuazMbec4k9ce0C9-CWXwcAVzxjjvapaDs9vcHDjmTMbC8imozPBAzioIPKWkMZyZGv9J2gimAjMjI7KUG3hCvVGwSKwEVe2Y1xMdt0h4R2DvQHpVrSnEtrDSJOzR--jmaG17d0QFczgWQw8n6ZPvuhWfxa9GdyX4Qd1gtJDewEhr6FXwCzq7T3iQvh4ZDdVieo8SlIlxpQJS_Cbv940IL--uqR60vQ-9XS");'>
-                            </div>
-                        </div>
-                        <p class="text-xs text-primary font-bold mb-2 uppercase tracking-tight">Architecture</p>
-                        <h4 class="font-bold leading-snug text-lg group-hover:text-primary transition-colors">Vertical
-                            Forests: The Solution to Urban Heat Islands?</h4>
-                    </div>
-                    <div class="group cursor-pointer">
-                        <div class="aspect-video rounded-xl overflow-hidden mb-4 shadow-sm">
-                            <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
-                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDpGQ3h2D3q2HPL6Z16Oco8NmruCIOgmtNxgt4uxQlttKBnoGOVKl8rgxSZt8XE0hYGDXZkGbpqmJa5Nn9dxYSEmaB94p82LzsKCkJXUMAM0EUZKyprg1D0T-uMflN_RBDvqdn6cTrvHKT28pJbsYJrgAlf03nnZekcAqkspBqCrjS9Is-q0Dx5IJZ31eU9aw2VVtZs_Djst_TImsaQG1pTlIhZaz3vBaxFcUhzG-J7opu67kIRi9_8tcAXcBjBDo0ofp_xAi_wTgDn");'>
-                            </div>
-                        </div>
-                        <p class="text-xs text-primary font-bold mb-2 uppercase tracking-tight">Infrastructure</p>
-                        <h4 class="font-bold leading-snug text-lg group-hover:text-primary transition-colors">The Next
-                            Decade of Zero-Emission Mass Transit</h4>
-                    </div>
-                    <div class="group cursor-pointer">
-                        <div class="aspect-video rounded-xl overflow-hidden mb-4 shadow-sm">
-                            <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
-                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA8F6J4Zs7gKk-QdatZkhTYtZjz7OkYvGsUnM7kKHFGCoe7RFS8gcy_11vMbnS8osvLOgjGHxsUdrIU-mVyXelmv0V20czHNqJ0Jcbdd2uF64mMPmRVetEHojIHsk5yQw9Ko9qiL8r_MuTNTjBqERds-2tLto6xQN8ekeXIsTm91yUXiFCTrqTcvFU1NnWoPWnDr1nwBM-ijfmQs36w24ARAujNI3ri245VxW4JGcXWc_Js1L3HKIAmAyq0mEoQqfMB1o413jW8ht3o");'>
-                            </div>
-                        </div>
-                        <p class="text-xs text-primary font-bold mb-2 uppercase tracking-tight">Technology</p>
-                        <h4 class="font-bold leading-snug text-lg group-hover:text-primary transition-colors">How AI is
-                            Reshaping Urban Traffic Flow Forever</h4>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="max-w-[960px] mx-auto px-4 py-20 border-t border-gray-100 dark:border-gray-800">
-            <h3 class="text-2xl font-bold mb-10 font-display">Comments (12)</h3>
-            <div class="flex gap-4 mb-12">
-                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-10 w-10 shrink-0 border border-gray-100"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDHWM80bfVDAeiWQ3P06MIlNXG_cDYnC7XvKEg3eU7Q2jqUcMYyLRKTKBJxV83SBzfhfl9ifIsvDKx5WT1TSk7gBDpeEGUW2d_d8p4YbUlJvSQEzEQqrjHOjKinHtqp09x5wKiNXyPI_7Y3C52anX3dSQBr9gGkhikTthKEjUNBy8Fcurh3m9Uo5FIXzgzK3nVsHcbL4_d1oOngxl2JTFWqb5KYjdwmtMbx03TkniUH2SBV5BIGqvaXAgoLqhAFwLRziPONxgql7jeB");'>
-                </div>
-                <div class="flex-1 flex flex-col gap-3">
-                    <textarea
-                        class="w-full rounded-xl border-gray-200 dark:bg-gray-800 dark:border-gray-700 focus:ring-primary focus:border-primary min-h-[120px] p-4 text-sm font-sans"
-                        placeholder="Join the discussion..."></textarea>
-                    <div class="flex justify-end">
-                        <button
-                            class="bg-primary text-white px-8 py-2.5 rounded-full font-bold text-sm shadow-md hover:shadow-lg transition-shadow">Post
-                            Comment</button>
-                    </div>
-                </div>
-            </div>
-            <div class="space-y-10">
-                <div class="flex gap-4">
-                    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-10 w-10 shrink-0"
-                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWHVJiFWr-qYkG9xSqS_klkYqYNtJcS3T6iWwwwMzMuMV3792zN36vRvsL16IyhGYp0BfZ7p09RoDlMzStjjbZ6d_yEhZaFU_UZJKsyMTnGboosK3VOr6_3FaZfYsHN6URYJhBfEQfVh_OBCfOQLuJyQyyy0E2n9rbzpmJJaq-CJlP4ji-tYLgm_6imZ30twwHv8j5J9q7tms1Roio66bHksNCxyGIfj3R_f_tbuEqRk4qE19y2uIvPc5v3YwjUW6qtfVhx3PfJiBW");'>
-                    </div>
-                    <div class="flex-1">
-                        <div class="flex items-center gap-2 mb-1">
-                            <span class="font-bold text-sm">Marcus J.</span>
-                            <span class="text-gray-400 text-xs">2 hours ago</span>
-                        </div>
-                        <p class="text-sm text-gray-700 dark:text-gray-300 mb-2 leading-relaxed font-sans">Great
-                            article! I think the economic barrier for these projects is still the biggest hurdle for
-                            developing nations. We need more focus on cost-effective sustainability.</p>
-                        <div class="flex gap-4">
-                            <button
-                                class="text-xs text-gray-500 font-bold hover:text-primary transition-colors flex items-center gap-1 font-sans"><span
-                                    class="material-symbols-outlined text-sm">thumb_up</span> 42</button>
-                            <button
-                                class="text-xs text-gray-500 font-bold hover:text-primary transition-colors font-sans">Reply</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="bg-white dark:bg-gray-950 py-12 px-4 border-t border-gray-100 dark:border-gray-900">
-        <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="flex items-center gap-2 text-[#111418] dark:text-white">
-                <span class="material-symbols-outlined text-2xl text-primary">newspaper</span>
-                <h2 class="text-lg font-bold font-display">NewsPortal</h2>
-            </div>
-            <p class="text-xs text-gray-400 font-sans">© 2023 NewsPortal Media Inc.</p>
-        </div>
-    </footer>
-
-</body>
-
-</html>
+</div>
+</div>
+</footer>
+</body></html>
